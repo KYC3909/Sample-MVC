@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="MVC_Sample" customModuleProvider="target">
+            <connections>
+                <outlet property="btnRefresh" destination="2NL-d9-bdd" id="GSs-TA-N3g"/>
+                <outlet property="containerView" destination="6ie-Ln-mfe" id="Ij2-M2-l9I"/>
+                <outlet property="contentView" destination="u5T-Py-tE2" id="RRq-O4-Dcg"/>
+                <outlet property="lblTitle" destination="DW4-QE-qXY" id="xY2-AB-gFb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u5T-Py-tE2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ie-Ln-mfe">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MVC Sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DW4-QE-qXY">
+                            <rect key="frame" x="138.5" y="20" width="99" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NL-d9-bdd">
+                            <rect key="frame" x="20" y="20" width="53" height="44"/>
+                            <state key="normal" title="Refresh">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btnRefreshSelected:" destination="-1" eventType="touchUpInside" id="rSf-da-gQV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.50572411500000003" green="0.65846980450000003" blue="0.66799789669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="DW4-QE-qXY" secondAttribute="bottom" id="A63-2C-6Zo"/>
+                        <constraint firstItem="DW4-QE-qXY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2NL-d9-bdd" secondAttribute="trailing" constant="8" id="ORe-nT-1lC"/>
+                        <constraint firstAttribute="bottom" secondItem="2NL-d9-bdd" secondAttribute="bottom" id="QO9-79-Wh9"/>
+                        <constraint firstItem="2NL-d9-bdd" firstAttribute="leading" secondItem="6ie-Ln-mfe" secondAttribute="leading" constant="20" id="blD-KF-ZeZ"/>
+                        <constraint firstItem="DW4-QE-qXY" firstAttribute="centerY" secondItem="2NL-d9-bdd" secondAttribute="centerY" id="hzR-T6-EiA"/>
+                        <constraint firstItem="DW4-QE-qXY" firstAttribute="top" secondItem="6ie-Ln-mfe" secondAttribute="top" constant="20" id="lqb-x8-8h8"/>
+                        <constraint firstItem="DW4-QE-qXY" firstAttribute="centerX" secondItem="6ie-Ln-mfe" secondAttribute="centerX" id="utP-9R-XeE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6ie-Ln-mfe" firstAttribute="top" secondItem="u5T-Py-tE2" secondAttribute="top" id="3gC-1I-amZ"/>
+                <constraint firstAttribute="bottom" secondItem="6ie-Ln-mfe" secondAttribute="bottom" id="JOL-JC-Fj0"/>
+                <constraint firstItem="6ie-Ln-mfe" firstAttribute="leading" secondItem="u5T-Py-tE2" secondAttribute="leading" id="QJC-6J-ijf"/>
+                <constraint firstAttribute="trailing" secondItem="6ie-Ln-mfe" secondAttribute="trailing" id="v0n-sK-WdF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="HID-b6-O01"/>
+        </view>
+    </objects>
+</document>

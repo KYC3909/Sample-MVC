@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchTableView" customModule="MVC_Sample" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Tep-VM-ThD" id="1tJ-6M-vO0"/>
+                <outlet property="searchView" destination="4de-Jb-WDh" id="hkQ-7j-u0d"/>
+                <outlet property="tableView" destination="4j3-QL-eDV" id="smb-fS-xwN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Tep-VM-ThD">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="4de-Jb-WDh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="qp3-wl-DLC"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4j3-QL-eDV">
+                    <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="x7L-LH-vpv"/>
+                        <outlet property="delegate" destination="-1" id="02Y-zf-bU8"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4de-Jb-WDh" firstAttribute="leading" secondItem="HaF-ZQ-Wrf" secondAttribute="leading" id="2j8-6H-s1c"/>
+                <constraint firstItem="HaF-ZQ-Wrf" firstAttribute="bottom" secondItem="4j3-QL-eDV" secondAttribute="bottom" id="4NQ-bH-ZXJ"/>
+                <constraint firstItem="4de-Jb-WDh" firstAttribute="trailing" secondItem="HaF-ZQ-Wrf" secondAttribute="trailing" id="6xe-Nn-16T"/>
+                <constraint firstItem="4de-Jb-WDh" firstAttribute="top" secondItem="Tep-VM-ThD" secondAttribute="top" id="9Hq-gv-UXP"/>
+                <constraint firstItem="HaF-ZQ-Wrf" firstAttribute="trailing" secondItem="4j3-QL-eDV" secondAttribute="trailing" id="E7H-6p-b2l"/>
+                <constraint firstItem="4j3-QL-eDV" firstAttribute="top" secondItem="4de-Jb-WDh" secondAttribute="bottom" id="ZfH-9z-4pN"/>
+                <constraint firstItem="4j3-QL-eDV" firstAttribute="leading" secondItem="Tep-VM-ThD" secondAttribute="leading" id="kUr-IN-etT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="HaF-ZQ-Wrf"/>
+        </view>
+    </objects>
+</document>
